@@ -1,0 +1,130 @@
+.add-friend-form {
+    background-color: #fcefdc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+  }
+  
+  .add-friend-form .input {
+    margin-bottom: 10px;
+  }
+  
+  .add-friend-form .input label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .add-friend-form .input input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    transition: .3s;
+  }
+  .add-friend-form .input input:focus {
+    outline: none;
+    border-color:#ff922b
+  }
+  
+  .add-friend-form button {
+    margin-right: 10px;
+    padding: 8px 16px;
+    background-color: #fbb13c;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .add-friend-form button:last-child {
+    background-color: #ff6b6b;
+  }
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Adjust the gap as needed */
+  }
+  
+  .button-container button {
+    flex: 1; /* Makes the buttons the same size */
+  }
+  .container {
+    display: flex;
+  }
+  
+  .left-side {
+    width: 300px;
+    margin-right: 20px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .text {
+    flex-grow: 1;
+  }
+  
+  .btn {
+    background-color: #f0ad4e;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .add {
+    background-color: #5bc0de;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .add-friend-form {
+    background-color: #ffe9d6;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .add-friend-form .input {
+    margin-bottom: 10px;
+    
+  }
+  
+  .form-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .form-buttons .add, .form-buttons .close {
+    background-color: #d9534f;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    
+  }
+  
+  .form-buttons .close {
+    background-color: #5bc0de;
+  }
+  .test{
+    margin-left: 10px;
+    color: red;
+  }

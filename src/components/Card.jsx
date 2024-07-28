@@ -1,57 +1,109 @@
-import React, { Fragment, useEffect, useState } from "react";
+// // 
+// import React, { Fragment, useState } from 'react';
 
-const Card = ({ user }) => {
+// const Card = ({ user, handleSplitBill }) => {
+//   const [billValue, setBillValue] = useState(0);
+//   const [yourExpenses, setYourExpenses] = useState(0);
+
+//   const handleBillValueChange = (e) => {
+//     setBillValue(Number(e.target.value));
+//   };
+
+//   const handleYourExpensesChange = (e) => {
+//     const value = Number(e.target.value);
+//     if (value <= billValue) {
+//       setYourExpenses(value);
+//     }
+//   };
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     handleSplitBill(billValue, yourExpenses);
+//   };
+
+//   return (
+//     <Fragment>
+//       <div className="right-side">
+//         <h2>Split a bill with {user}</h2>
+//         <form onSubmit={handleSubmit}>
+//           <div className="input">
+//             <label>💰 Bill Value</label>
+//             <input type="number" value={billValue} onChange={handleBillValueChange} />
+//           </div>
+//           <div className="input">
+//             <label>🧍‍♀️ Your Expenses</label>
+//             <input type="number" value={yourExpenses} onChange={handleYourExpensesChange} />
+//           </div>
+//           <div className="input">
+//             <label>👩🏽‍🤝‍🧑🏿 {user}'s expense</label>
+//             <input type="number" value={billValue - yourExpenses} disabled />
+//           </div>
+//           <div className="input">
+//             <label>🤑 Who is paying the bill</label>
+//             <select>
+//               <option value="You">You</option>
+//               <option value={user}>{user}</option>
+//             </select>
+//           </div>
+//           <button type="submit">Split Bill</button>
+//         </form>
+//       </div>
+//     </Fragment>
+//   );
+// }
+
+// export default Card;
+import React, { Fragment, useState } from 'react';
+
+const Card = ({ user, handleSplitBill }) => {
   const [billValue, setBillValue] = useState(0);
-  const [minusValue, setminusValue] = useState(0);
-  const [userExpense, setUserExpense] = useState(0);
-  useEffect(() => {
-    setUserExpense(billValue);
-  }, [billValue]);
+  const [yourExpenses, setYourExpenses] = useState(0);
+
+  const handleBillValueChange = (e) => {
+    setBillValue(Number(e.target.value));
+  };
+
+  const handleYourExpensesChange = (e) => {
+    const value = Number(e.target.value);
+    if (value <= billValue) {
+      setYourExpenses(value);
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    handleSplitBill(billValue, yourExpenses);
+  };
+
   return (
     <Fragment>
       <div className="right-side">
         <h2>Split a bill with {user}</h2>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="input">
             <label>💰 Bill Value</label>
-            <input
-              id="input1"
-              type="number"
-              value={billValue}
-              onChange={(e) => setBillValue(Number(e.target.value))}
-            />
+            <input type="number" value={billValue} onChange={handleBillValueChange} />
           </div>
           <div className="input">
             <label>🧍‍♀️ Your Expenses</label>
-            <input
-              type="number"
-              value={minusValue}
-              onChange={(e) => setminusValue(Number(e.target.value))}
-            />
+            <input type="number" value={yourExpenses} onChange={handleYourExpensesChange} />
           </div>
           <div className="input">
             <label>👩🏽‍🤝‍🧑🏿 {user}'s expense</label>
-            <input
-              id="input3"
-              type="number"
-              disabled
-              value={userExpense - minusValue}
-              onChange={(e) => setUserExpense(Number(e.target.value))}
-            />
+            <input type="number" value={billValue - yourExpenses} disabled />
           </div>
           <div className="input">
             <label>🤑 Who is paying the bill</label>
             <select>
-              <option value="">You</option>
-              <option value="">Mohamed</option>
+              <option value="You">You</option>
+              <option value={user}>{user}</option>
             </select>
           </div>
-
-          <button>Split Bill</button>
+          <button type="submit">Split Bill</button>
         </form>
       </div>
     </Fragment>
   );
-};
+}
 
 export default Card;

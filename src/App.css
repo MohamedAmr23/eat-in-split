@@ -109,3 +109,39 @@ button:hover{
     margin-top: 10px;
     padding: 10px 25px;
 }
+.add {
+    background-color: #ff922b;
+    border: none;
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .add-friend-form {
+    background-color: #ffe9d6;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .add-friend-form .input {
+    margin-bottom: 10px;
+  }
+  
+  .form-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .form-buttons .add, .form-buttons .close {
+    background-color: #ff922b;
+    border: none;
+    color: black;
+    padding: 5px 10px;
+    cursor: pointer;
+
+  }
+  
+  .form-buttons .close {
+    background-color: #ff922b;
+  }
